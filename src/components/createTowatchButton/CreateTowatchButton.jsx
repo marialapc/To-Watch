@@ -1,6 +1,8 @@
+import "./createTowatchButton.scss"
+
 function CreateTowatchButton(){
     return(
-     <button>create</button>
+     <button className="createTowatchButton">Add new film</button>
     )
   }
 

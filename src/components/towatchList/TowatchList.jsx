@@ -1,6 +1,7 @@
+import "./towatchList.scss"
 function TowatchList({children}){
     return(
-   <ul>
+   <ul className="towatchList">
     {children}
    </ul>
     );
