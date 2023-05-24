@@ -1,3 +1,13 @@
 .createTowatchButton{
+    color: var(--white);
     background-color: var(--pink);
+    font-family: var(--fontPrimary);
+    font-size: 1rem;
+    padding: 0.5rem;
+}
+
+.createTowatchButton:hover{
+    cursor: pointer;
+    color: var(--pink);
+    background-color: var(--white);
 }

@@ -1,4 +1,6 @@
 .towatchCounter{
-color: var(--pink);
 font-size: 3rem;
+&__number{
+color: var(--pink);
+}
 }
