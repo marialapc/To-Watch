@@ -7,7 +7,6 @@ import { TowatchList } from "../towatchList/TowatchList";
 import { TowatchSearcher } from "../towatchSearcher/TowatchSearcher";
 
 const defaultMovies = [
-  {title: 'Titanic', watched: false},
   {title: 'Arrival', watched: true},
   {title: 'Abyss', watched: false},
   {title: 'Jurassic Park', watched: true},
@@ -17,7 +16,7 @@ const defaultMovies = [
 
 function App() {
   return (
-    <div className="App">
+    <div className="app">
       <TowatchCounter  watched={3} total={7}/>
       <TowatchSearcher />
 

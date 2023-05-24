@@ -1,3 +1,8 @@
 @import '../../styles/reset.scss';
 @import '../../styles/main.scss';
 
+.app{
+    display: flex;
+    flex-direction: column;
+    gap: 1rem;
+}
