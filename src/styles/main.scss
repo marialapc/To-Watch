@@ -1,0 +1,21 @@
+:root {
+    --white: #ffffff;
+    --black: #000000;
+    --pink: #ff3e72;
+    --fontPrimary: "staatliches"
+  }
+
+  @font-face {
+    font-family: "staatliches";
+    src: url("../assets/fonts/Staatliches.ttf") format("truetype");
+  }
+  
+  body {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    color: white;
+    background-color: var(--black);
+    font-size: 16px;
+    font-family: var(--fontPrimary);
+  }
