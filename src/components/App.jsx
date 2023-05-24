@@ -3,18 +3,27 @@ import { CreateTowatchButton } from "./CreateTowatchButton";
 import { TowatchCounter } from "./TowatchCounter";
 import { TowatchItem } from "./TowatchItem";
 import { TowatchList } from "./TowatchList";
-import { TowatchSearch } from "./TowatchSearch";
+import { TowatchSearcher } from "./TowatchSearcher";
+
+const defaultMovies = [
+  {title: 'Titanic', watched: false},
+  {title: 'Arrival', watched: true},
+  {title: 'Abyss', watched: false},
+  {title: 'Jurassic Park', watched: true},
+  {title: 'Star Wars', watched: true},
+
+]
 
 function App() {
   return (
     <div className="App">
-      <TowatchCounter />
-      <TowatchSearch />
+      <TowatchCounter  watched={3} total={7}/>
+      <TowatchSearcher />
 
       <TowatchList>
-        <TowatchItem />
-        <TowatchItem />
-        <TowatchItem />
+        {defaultMovies.map(towatch => (
+          <TowatchItem  key={towatch.title} title={towatch.title} watched={towatch.watched}/>
+        ) )}
       </TowatchList>
 
       <CreateTowatchButton />

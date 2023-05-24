@@ -1,8 +1,8 @@
-function TowatchItem(){
+function TowatchItem(props){
     return(
       <li>
         <span>V</span>
-        <p>Blade Runner</p>
+        <p>{props.title}</p>
         <span>X</span>
       </li>
     )

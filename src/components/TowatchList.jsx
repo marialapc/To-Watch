@@ -1,7 +1,7 @@
-function TowatchList(props){
+function TowatchList({children}){
     return(
    <ul>
-    {props.children}
+    {children}
    </ul>
     );
   }
