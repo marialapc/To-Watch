@@ -1,9 +1,9 @@
-import "../styles/App.scss";
-import { CreateTowatchButton } from "./CreateTowatchButton";
-import { TowatchCounter } from "./TowatchCounter";
-import { TowatchItem } from "./TowatchItem";
-import { TowatchList } from "./TowatchList";
-import { TowatchSearcher } from "./TowatchSearcher";
+import "./app.scss";
+import { CreateTowatchButton } from "../createTowatchButton/CreateTowatchButton";
+import { TowatchCounter } from "../towatchCounter/TowatchCounter";
+import { TowatchItem } from "../towatchItem/TowatchItem";
+import { TowatchList } from "../towatchList/TowatchList";
+import { TowatchSearcher } from "../towatchSearcher/TowatchSearcher";
 
 const defaultMovies = [
   {title: 'Titanic', watched: false},
