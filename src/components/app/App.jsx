@@ -28,10 +28,19 @@ function App() {
 
   const watched = (title) => {
     const newMovies = [...movies];
-    const movieIndex = newMovies.findIndex((movie) => movie.title === title)
+    const movieIndex = newMovies.findIndex((movie) => movie.title === title);
     newMovies[movieIndex].watched = true;
     setMovies(newMovies);
-  }
+  };
+
+  const deleted = (title) => {
+    const newMovies = [...movies];
+    const movieIndex = newMovies.findIndex((movie) => movie.title === title);
+    newMovies.splice(movieIndex, 1);
+    setMovies(newMovies);
+  };
+
+
 
   return (
     <div className="app">
@@ -48,6 +57,7 @@ function App() {
             title={movie.title}
             watched={movie.watched}
             onWatched={() => watched(movie.title)}
+            onDelete={() => deleted(movie.title)}
           />
         ))}
       </TowatchList>

@@ -1,8 +1,8 @@
-import React from 'react';
-import './towatchItem.scss';
-import watchedIcon from '../../assets/icons/watched-icon.png';
-import watchedIconActive from '../../assets/icons/watched-icon-active.png';
-import deleteIcon from '../../assets/icons/delete-icon.png';
+import React from "react";
+import "./towatchItem.scss";
+import watchedIcon from "../../assets/icons/watched-icon.png";
+import watchedIconActive from "../../assets/icons/watched-icon-active.png";
+import deleteIcon from "../../assets/icons/delete-icon.png";
 
 function TowatchItem(props) {
   return (
@@ -22,10 +22,14 @@ function TowatchItem(props) {
         />
       )}
       <p className="towatchItem__title">{props.title}</p>
-      <img className="towatchItem__delete-icon" src={deleteIcon} alt="delete" />
+      <img
+        className="towatchItem__delete-icon"
+        src={deleteIcon}
+        alt="delete"
+        onClick={props.onDelete}
+      />
     </li>
   );
 }
 
 export { TowatchItem };
-
