@@ -1,9 +1,14 @@
 .towatchItem{
     display: flex;
     justify-content: space-between;
+    align-items: center;
     width: 20rem;
     padding: 0.8rem;
     font-size: 1rem;
     color: var(--black);
     background-color: var(--white);
+
+    &__delete-icon{
+        height: 0.8rem;
+    }
 }

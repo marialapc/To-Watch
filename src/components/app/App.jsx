@@ -8,9 +8,9 @@ import { TowatchSearcher } from "../towatchSearcher/TowatchSearcher";
 
 const defaultMovies = [
   {title: 'Arrival', watched: true},
-  {title: 'Abyss', watched: false},
   {title: 'Jurassic Park', watched: true},
-  {title: 'Star Wars', watched: true},
+  {title: 'Abyss', watched: false},
+  {title: 'Back to the future', watched: true},
 
 ]
 
