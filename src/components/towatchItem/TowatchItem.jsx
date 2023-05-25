@@ -18,6 +18,7 @@ function TowatchItem(props) {
           className="towatchItem__watched-icon"
           src={watchedIcon}
           alt="not watched"
+          onClick={props.onWatched}
         />
       )}
       <p className="towatchItem__title">{props.title}</p>

@@ -18,14 +18,20 @@ function App() {
   const [searchValue, setSearchValue] = React.useState("");
 
   const watchedMovies = movies.filter((movie) => !!movie.watched).length;
-
   const totalMovies = movies.length;
-
+  
   const searchedMovies = movies.filter((movie) => {
     const movieTitle = movie.title.toLowerCase();
     const searchTitle = searchValue.toLowerCase();
     return movieTitle.includes(searchTitle);
   });
+
+  const watched = (title) => {
+    const newMovies = [...movies];
+    const movieIndex = newMovies.findIndex((movie) => movie.title === title)
+    newMovies[movieIndex].watched = true;
+    setMovies(newMovies);
+  }
 
   return (
     <div className="app">
@@ -41,6 +47,7 @@ function App() {
             key={movie.title}
             title={movie.title}
             watched={movie.watched}
+            onWatched={() => watched(movie.title)}
           />
         ))}
       </TowatchList>
