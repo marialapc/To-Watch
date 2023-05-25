@@ -5,9 +5,9 @@ function TowatchCounter({total, watched}){
     return(
       <h1 className="towatchCounter">
         Has visto 
-        <span className="towatchCounter__number">{watched}</span> 
+        <span className="towatchCounter__number"> {watched} </span> 
          de  
-         <span className="towatchCounter__number">{total} </span> 
+         <span className="towatchCounter__number"> {total} </span> 
          películas
       </h1>
     )

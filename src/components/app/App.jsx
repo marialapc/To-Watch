@@ -14,25 +14,26 @@ const defaultMovies = [
 ];
 
 function App() {
+  const [movies, setMovies] = React.useState(defaultMovies);
+  const [searchValue, setSearchValue] = React.useState("");
 
-  const [searchValue, setSearchValue] = React.useState('');
-
-  console.log('buscar '+ searchValue)
+  const watchedMovies = movies.filter((movie) => !!movie.watched).length;
+  const totalMovies = movies.length;
 
   return (
     <div className="app">
-      <TowatchCounter watched={3} total={7} />
-      <TowatchSearcher 
-      searchValue={searchValue} 
-      setSearchValue={setSearchValue}
+      <TowatchCounter watched={watchedMovies} total={totalMovies} />
+      <TowatchSearcher
+        searchValue={searchValue}
+        setSearchValue={setSearchValue}
       />
 
       <TowatchList>
-        {defaultMovies.map((towatch) => (
+        {defaultMovies.map((movie) => (
           <TowatchItem
-            key={towatch.title}
-            title={towatch.title}
-            watched={towatch.watched}
+            key={movie.title}
+            title={movie.title}
+            watched={movie.watched}
           />
         ))}
       </TowatchList>
