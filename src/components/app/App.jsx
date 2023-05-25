@@ -20,7 +20,7 @@ function App() {
 
   const watchedMovies = movies.filter((movie) => !!movie.watched).length;
   const totalMovies = movies.length;
-  const searchedMovies = movies.filter((movie) => movie.title.includes(searchValue));
+  const searchedMovies = movies.filter((movie) => movie.title.toLowerCase().includes(searchValue));
 
   return (
     <div className="app">
