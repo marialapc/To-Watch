@@ -1,6 +1,7 @@
+import "./towatchSearcher.scss"
 function TowatchSearcher(){
     return(
-     <input placeholder="The third man"/>
+     <input className="towatchSearcher" placeholder="...The third man"/>
     )
   }
 

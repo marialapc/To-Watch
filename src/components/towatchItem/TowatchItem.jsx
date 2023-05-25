@@ -1,8 +1,9 @@
 import "./towatchItem.scss"
+import watchedIcon from "../../assets/icons/watched-icon.png"
 function TowatchItem(props){
     return(
       <li className="towatchItem">
-        <span>V</span>
+       <img src={watchedIcon} alt="watched" />
         <p>{props.title}</p>
         <span>X</span>
       </li>
