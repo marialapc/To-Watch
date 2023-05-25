@@ -14,11 +14,13 @@ const defaultMovies = [
 ];
 
 function App() {
+
   const [movies, setMovies] = React.useState(defaultMovies);
   const [searchValue, setSearchValue] = React.useState("");
 
   const watchedMovies = movies.filter((movie) => !!movie.watched).length;
   const totalMovies = movies.length;
+  const searchedMovies = movies.filter((movie) => movie.title.includes(searchValue));
 
   return (
     <div className="app">
@@ -29,7 +31,7 @@ function App() {
       />
 
       <TowatchList>
-        {defaultMovies.map((movie) => (
+        {searchedMovies.map((movie) => (
           <TowatchItem
             key={movie.title}
             title={movie.title}
