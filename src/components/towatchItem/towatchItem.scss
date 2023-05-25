@@ -1,14 +1,22 @@
-.towatchItem{
-    display: flex;
-    justify-content: space-between;
-    align-items: center;
-    width: 20rem;
-    padding: 0.8rem;
-    font-size: 1rem;
-    color: var(--black);
-    background-color: var(--white);
+.towatchItem {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  width: 20rem;
+  padding: 0.7rem;
+  font-size: 1rem;
+  color: var(--black);
+  background-color: var(--white);
 
-    &__delete-icon{
-        height: 0.8rem;
-    }
+  &__watched-icon:hover {
+    width: 2.2rem;
+  }
+
+  &__delete-icon {
+    height: 0.8rem;
+  }
+
+  &__delete-icon:hover {
+    height: 1rem;
+  }
 }

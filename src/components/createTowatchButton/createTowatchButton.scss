@@ -1,17 +1,17 @@
-.createTowatchButton{
-    width: 10rem;
-    padding: 0.5rem;
-    color: var(--pink);
-    background-color: var(--black);
-    border-color: var(--pink);
-    font-family: var(--fontPrimary);
-    font-size: 1rem;
-    margin-top: 1rem;
+.createTowatchButton {
+  width: 10rem;
+  padding: 0.5rem;
+  color: var(--pink);
+  background-color: var(--black);
+  border-color: var(--pink);
+  font-family: var(--fontPrimary);
+  font-size: 1rem;
+  margin-top: 1rem;
 }
 
-.createTowatchButton:hover{
-    cursor: pointer;
-    border-color: var(--pink);
-    color: var(--black);
-    background-color: var(--pink);
+.createTowatchButton:hover {
+  cursor: pointer;
+  border-color: var(--pink);
+  color: var(--black);
+  background-color: var(--pink);
 }
