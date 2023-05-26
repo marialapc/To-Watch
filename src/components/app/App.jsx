@@ -1,10 +1,7 @@
 import React from "react";
 import "./app.scss";
-import { CreateTowatchButton } from "../createTowatchButton/CreateTowatchButton";
-import { TowatchCounter } from "../towatchCounter/TowatchCounter";
-import { TowatchItem } from "../towatchItem/TowatchItem";
-import { TowatchList } from "../towatchList/TowatchList";
-import { TowatchSearcher } from "../towatchSearcher/TowatchSearcher";
+import { useLocalStorage } from "../../hooks/useLocalStorage";
+import { AppUI } from "./AppUI"
 
 //   const defaultMovies = [
 //    { title: "Arrival", watched: true },
@@ -16,27 +13,6 @@ import { TowatchSearcher } from "../towatchSearcher/TowatchSearcher";
 //  localStorage.setItem('ToWatch1.0', JSON.stringify(defaultMovies));
 //  localStorage.removeItem('Towatch1.0');
 
-function useLocalStorage(itemName, initialValue){  //custom hook?
-
-  const localStorageItem = localStorage.getItem(itemName);
-  let parsedItem;
-
-  if (!localStorageItem){
-    localStorage.setItem(itemName, JSON.stringify(initialValue));
-    parsedItem = initialValue;
-  } else {
-    parsedItem = JSON.parse(localStorageItem);
-  }
-
-  const [item, setItem] = React.useState(parsedItem);
-
-  const saveItem = (newItem) => {
-    localStorage.setItem(itemName, JSON.stringify(newItem));
-    setItem(newItem);
-  };
-
-  return [item, saveItem] ;
-}
 
 function App() {
   
@@ -68,25 +44,15 @@ function App() {
 
   return (
     <div className="app">
-      <TowatchCounter watched={watchedMovies} total={totalMovies} />
-      <TowatchSearcher
-        searchValue={searchValue}
-        setSearchValue={setSearchValue}
-      />
-
-      <TowatchList>
-        {searchedMovies.map((movie) => (
-          <TowatchItem
-            key={movie.title}
-            title={movie.title}
-            watched={movie.watched}
-            onWatched={() => watched(movie.title)}
-            onDelete={() => deleted(movie.title)}
-          />
-        ))}
-      </TowatchList>
-
-      <CreateTowatchButton />
+     <AppUI
+      watchedMovies={watchedMovies}
+      totalMovies={totalMovies}
+      searchValue={searchValue}
+      setSearchValue={setSearchValue}
+      searchedMovies={searchedMovies}
+      watched={watched}
+      deleted={deleted}
+     />
     </div>
   );
 }
