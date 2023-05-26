@@ -20,14 +20,13 @@ function useLocalStorage(itemName, initialValue){
             parsedItem = JSON.parse(localStorageItem);
             setItem(parsedItem);
           }
-    
           setLoading(false);
         } catch(error){
           setLoading(true);
           setError(true);
         }
         }, 2000);
-      });
+      })
   
     const saveItem = (newItem) => {
       localStorage.setItem(itemName, JSON.stringify(newItem));
@@ -39,7 +38,7 @@ function useLocalStorage(itemName, initialValue){
       saveItem,
       loading,
       error
-    } ;
+    };
   }
 
   export {useLocalStorage};
