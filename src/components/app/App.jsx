@@ -6,15 +6,20 @@ import { TowatchItem } from "../towatchItem/TowatchItem";
 import { TowatchList } from "../towatchList/TowatchList";
 import { TowatchSearcher } from "../towatchSearcher/TowatchSearcher";
 
-const defaultMovies = [
-  { title: "Arrival", watched: true },
-  { title: "Jurassic Park", watched: true },
-  { title: "Abyss", watched: false },
-  { title: "Back to the future", watched: true },
-];
 
 function App() {
-  const [movies, setMovies] = React.useState(defaultMovies);
+
+  const localStorageMovies = localStorage.getItem('ToWatch1.0');
+  let parsedMovies;
+
+  if (!localStorageMovies){
+    localStorage.setItem('ToWatch1.0', JSON.stringify([]));
+    parsedMovies = [];
+  } else {
+    parsedMovies = JSON.parse(localStorageMovies);
+  }
+
+  const [movies, setMovies] = React.useState(parsedMovies);
   const [searchValue, setSearchValue] = React.useState("");
 
   const watchedMovies = movies.filter((movie) => !!movie.watched).length;
@@ -26,18 +31,23 @@ function App() {
     return movieTitle.includes(searchTitle);
   });
 
+  const saveMovies = (newMovies) => {
+    localStorage.setItem('ToWatch1.0', JSON.stringify(newMovies));
+    setMovies(newMovies);
+  };
+
   const watched = (title) => {
     const newMovies = [...movies];
     const movieIndex = newMovies.findIndex((movie) => movie.title === title);
     newMovies[movieIndex].watched = true;
-    setMovies(newMovies);
+    saveMovies(newMovies);
   };
 
   const deleted = (title) => {
     const newMovies = [...movies];
     const movieIndex = newMovies.findIndex((movie) => movie.title === title);
     newMovies.splice(movieIndex, 1);
-    setMovies(newMovies);
+    saveMovies(newMovies);
   };
 
 
