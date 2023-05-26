@@ -5,6 +5,8 @@ import { TowatchList } from "../towatchList/TowatchList";
 import { TowatchSearcher } from "../towatchSearcher/TowatchSearcher";
 
 function AppUI({
+  loading,
+  error,
   watchedMovies,
   totalMovies,
   searchValue,
@@ -14,7 +16,7 @@ function AppUI({
   deleted,
 }) {
   return (
-    <>
+    <div className="app">
       <TowatchCounter watched={watchedMovies} total={totalMovies} />
       <TowatchSearcher
         searchValue={searchValue}
@@ -22,6 +24,10 @@ function AppUI({
       />
 
       <TowatchList>
+        {loading && <p>Loading...</p>}
+        {error && <p>error</p>}
+        {(!loading && searchedMovies.length === 0) && <p>add a film</p>}
+
         {searchedMovies.map((movie) => (
           <TowatchItem
             key={movie.title}
@@ -34,7 +40,7 @@ function AppUI({
       </TowatchList>
 
       <CreateTowatchButton />
-    </>
+    </div>
   );
 }
 

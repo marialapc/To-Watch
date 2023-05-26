@@ -1,8 +1,9 @@
 import React from "react";
 import "./app.scss";
+import { AppUI } from "./AppUI";
 import { useLocalStorage } from "../../hooks/useLocalStorage";
-import { AppUI } from "./AppUI"
 
+// localStorage.removeItem('Towatch1.0');
 //   const defaultMovies = [
 //    { title: "Arrival", watched: true },
 //   { title: "Jurassic Park", watched: true },
@@ -11,13 +12,11 @@ import { AppUI } from "./AppUI"
 //  ];
 
 //  localStorage.setItem('ToWatch1.0', JSON.stringify(defaultMovies));
-//  localStorage.removeItem('Towatch1.0');
-
 
 function App() {
   
-  const [movies, saveMovies] = useLocalStorage('ToWatch1.0', []);
-  const [searchValue, setSearchValue] = React.useState("");
+  const {item: movies, saveItem: saveMovies, loading, error} = useLocalStorage('ToWatch1.0', []);
+  const [searchValue, setSearchValue] = React.useState('');
 
   const watchedMovies = movies.filter((movie) => !!movie.watched).length;
   const totalMovies = movies.length;
@@ -43,8 +42,9 @@ function App() {
   };
 
   return (
-    <div className="app">
      <AppUI
+      loading={loading}
+      error={error}
       watchedMovies={watchedMovies}
       totalMovies={totalMovies}
       searchValue={searchValue}
@@ -53,7 +53,6 @@ function App() {
       watched={watched}
       deleted={deleted}
      />
-    </div>
   );
 }
 
