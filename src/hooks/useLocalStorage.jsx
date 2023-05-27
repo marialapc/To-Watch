@@ -42,3 +42,13 @@ function useLocalStorage(itemName, initialValue){
   }
 
   export {useLocalStorage};
+
+  // localStorage.removeItem('Towatch1.0');
+//   const defaultMovies = [
+//    { title: "Arrival", watched: true },
+//   { title: "Jurassic Park", watched: true },
+//   { title: "Abyss", watched: false },
+//    { title: "Back to the future", watched: true },
+//  ];
+
+//  localStorage.setItem('ToWatch1.0', JSON.stringify(defaultMovies));

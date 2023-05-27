@@ -3,26 +3,22 @@ import { TowatchCounter } from "../towatchCounter/TowatchCounter";
 import { TowatchItem } from "../towatchItem/TowatchItem";
 import { TowatchList } from "../towatchList/TowatchList";
 import { TowatchSearcher } from "../towatchSearcher/TowatchSearcher";
+import { TowatchContext} from "../../hooks/TowatchContext";
 
-function AppUI({
+function AppUI(){
+  return (
+    <div className="app">
+      <TowatchCounter />
+      <TowatchSearcher
+      />
+      <TowatchContext.Consumer>
+        {({
   loading,
   error,
-  watchedMovies,
-  totalMovies,
-  searchValue,
-  setSearchValue,
   searchedMovies,
   watched,
   deleted,
-}) {
-  return (
-    <div className="app">
-      <TowatchCounter watched={watchedMovies} total={totalMovies} />
-      <TowatchSearcher
-        searchValue={searchValue}
-        setSearchValue={setSearchValue}
-      />
-
+        }) =>(  
       <TowatchList>
         {loading && <p>Loading...</p>}
         {error && <p>error</p>}
@@ -38,6 +34,7 @@ function AppUI({
           />
         ))}
       </TowatchList>
+        )}</TowatchContext.Consumer>
 
       <CreateTowatchButton />
     </div>
