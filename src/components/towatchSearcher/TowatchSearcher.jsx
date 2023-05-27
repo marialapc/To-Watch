@@ -1,8 +1,12 @@
 import React  from "react";
 import "./towatchSearcher.scss"
+import { TowatchContext } from "../../hooks/TowatchContext";
 
-function TowatchSearcher({searchValue, setSearchValue}){
-  
+function TowatchSearcher(){
+  const {
+   searchValue,
+    setSearchValue,
+   } = React.useContext(TowatchContext)
     return(
      <input 
      className="towatchSearcher" 
