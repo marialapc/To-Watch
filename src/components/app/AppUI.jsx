@@ -5,7 +5,7 @@ import { TowatchList } from "../towatchList/TowatchList";
 import { TowatchSearcher } from "../towatchSearcher/TowatchSearcher";
 import { TowatchContext } from "../../hooks/TowatchContext";
 import React from "react";
-import { Modal } from "../modal/modal";
+import { Modal } from "../modal/Modal";
 
 function AppUI() {
   const {
@@ -39,7 +39,9 @@ function AppUI() {
         ))}
       </TowatchList>
 
-      <CreateTowatchButton />
+      <CreateTowatchButton
+      setOpenModal={setOpenModal
+      } />
       {openModal && (
        <Modal>
        Modal para añadir film

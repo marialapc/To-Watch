@@ -1,11 +1,11 @@
 import "./createTowatchButton.scss";
 
-function CreateTowatchButton() {
+function CreateTowatchButton({setOpenModal}) {
   return (
      <button 
      className="createTowatchButton"
      onClick={() =>{
-         console.log('click')
+        setOpenModal(state => !state);
         }
       } 
     > + Add new film</button>
