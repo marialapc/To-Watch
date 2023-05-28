@@ -1,13 +1,18 @@
 .createTowatchButton {
+  align-self: flex-end;
+  margin-right: 7rem;
   z-index: 1;
-  width: 10rem;
-  padding: 0.5rem;
-  color: var(--pink);
-  background-color: var(--black);
-  border-color: var(--pink);
-  font-family: var(--fontPrimary);
-  font-size: 1rem;
-  margin-top: 1rem;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+width: 2rem;
+height: 2rem;
+font-size: 2rem;
+border-radius: 50%;
+color: var(--pink);
+background-color: var(--black);
+border: 1px solid var(--pink);
+
   
 }
 

@@ -22,6 +22,15 @@ function TowatchProvider({ children }) {
     return movieTitle.includes(searchTitle);
   });
 
+  const addNewMovie = (title) => {
+    const newMovies = [...movies];
+    newMovies.push({
+    title,
+    watched: false,
+    });
+    saveMovies(newMovies);
+    };
+
   const watched = (title) => {
     const newMovies = [...movies];
     const movieIndex = newMovies.findIndex((movie) => movie.title === title);
@@ -48,8 +57,10 @@ function TowatchProvider({ children }) {
         searchedMovies,
         watched,
         deleted,
+        addNewMovie,
         openModal,
         setOpenModal,
+        
       }}
     >
       {children}

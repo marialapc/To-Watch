@@ -8,7 +8,7 @@ function CreateTowatchButton({setOpenModal}) {
         setOpenModal(state => !state);
         }
       } 
-    > + Add new film</button>
+    > +</button>
 );
 }
 
