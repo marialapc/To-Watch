@@ -1,0 +1,47 @@
+.form {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  gap: 1rem;
+  padding: 1rem;
+  background-color: var(--white);
+  border: 3px solid var(--pink);
+  border-radius: 1rem;
+  color: var(--pink);
+  background-color: black;
+
+  &__label {
+    font-size: 2rem;
+  }
+
+  &__textarea {
+   border: 2px solid var(--pink);
+   border-radius: 0.5rem;
+   padding: 0.1rem;
+  }
+
+  &__buttonContainer {
+    display: flex;
+    gap: 1rem;
+  }
+}
+
+.form__button {
+  font-family: var(--fontPrimary);
+  font-size: 1rem;
+  padding: 0.1rem;
+  width: 3.5rem;
+  cursor: pointer;
+  &--cancel {
+    color: var(--pink);
+    background-color: var(--black);
+    border: 1px solid var(--pink);
+  }
+
+  &--add {
+    color: var(--black);
+    background-color: var(--pink);
+    border: 1px solid var(--blck);
+  }
+}

@@ -6,6 +6,7 @@ import { TowatchSearcher } from "../towatchSearcher/TowatchSearcher";
 import { TowatchContext } from "../../hooks/TowatchContext";
 import React from "react";
 import { Modal } from "../modal/Modal";
+import { AddFilm } from "../modal/AddFilm";
 
 function AppUI() {
   const {
@@ -44,7 +45,9 @@ function AppUI() {
       } />
       {openModal && (
        <Modal>
-       Modal para añadir film
+  <AddFilm>
+    
+  </AddFilm>
        </Modal>
        )}
     </div>
