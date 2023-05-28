@@ -11,6 +11,7 @@ function TowatchProvider({ children }) {
     error,
   } = useLocalStorage("ToWatch1.0", []);
   const [searchValue, setSearchValue] = React.useState("");
+  const [openModal, setOpenModal] = React.useState(false);
 
   const watchedMovies = movies.filter((movie) => !!movie.watched).length;
   const totalMovies = movies.length;
@@ -47,6 +48,8 @@ function TowatchProvider({ children }) {
         searchedMovies,
         watched,
         deleted,
+        openModal,
+        setOpenModal,
       }}
     >
       {children}

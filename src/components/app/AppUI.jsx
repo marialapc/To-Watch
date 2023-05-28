@@ -5,10 +5,18 @@ import { TowatchList } from "../towatchList/TowatchList";
 import { TowatchSearcher } from "../towatchSearcher/TowatchSearcher";
 import { TowatchContext } from "../../hooks/TowatchContext";
 import React from "react";
+import { Modal } from "../modal/modal";
 
 function AppUI() {
-  const { loading, error, searchedMovies, watched, deleted } =
-    React.useContext(TowatchContext);
+  const {
+    loading,
+    error,
+    searchedMovies,
+    watched,
+    deleted,
+    openModal,
+    setOpenModal,
+  } = React.useContext(TowatchContext);
 
   return (
     <div className="app">
@@ -32,6 +40,11 @@ function AppUI() {
       </TowatchList>
 
       <CreateTowatchButton />
+      {openModal && (
+       <Modal>
+       Modal para añadir film
+       </Modal>
+       )}
     </div>
   );
 }
