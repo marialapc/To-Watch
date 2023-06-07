@@ -22,7 +22,7 @@ function AddMovie() {
 
   return (
     <form className="form" onSubmit={onSubmit}>
-      <label className="form__label">Escribe tu nueva película</label>
+      <label className="form__label"> AÑADE UNA NUEVA PELÍCULA</label>
       <textarea
         className="form__textarea"
         placeholder="Blade Runner"
