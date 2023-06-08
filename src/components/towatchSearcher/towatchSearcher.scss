@@ -1,19 +1,19 @@
-.towatchSearcher{
-    display: flex;
-    flex-direction: row;
-    align-items: center;
-    justify-content: center;
-    gap: 0.3rem;
-    &__icon{
-        height: 1.5rem;
-    }
-    &__bar{
+.towatchSearcher {
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  justify-content: center;
+  gap: 0.3rem;
+  padding-bottom: 1rem;
+  &__icon {
+    height: 1.5rem;
+  }
+  &__bar {
     width: 13rem;
     padding: 0.3rem;
     border: 2px solid var(--pink);
     border-radius: 0.4rem;
     color: var(--white);
     background-color: var(--black);
- 
-    }
+  }
 }

@@ -1,22 +1,21 @@
-.towatchList{
-    display: flex;
-    flex-direction: column;
-    list-style: none;
-    gap: 1rem;
-    height: 20rem;
-   overflow: auto;
-   padding-top: 1.6rem;
-    
+.towatchList {
+  display: flex;
+  flex-direction: column;
+  list-style: none;
+  gap: 1rem;
+  height: 20rem;
+  overflow: auto;
+  padding-top: 1rem;
 }
 
 .towatchList::-webkit-scrollbar {
-    width: 0.5em;
+  width: 0.5em;
 }
 
 .towatchList::-webkit-scrollbar-thumb {
-    background-color: transparent;
+  background-color: transparent;
 }
 
 .towatchList::-webkit-scrollbar-track {
-    background-color: transparent;
+  background-color: transparent;
 }
