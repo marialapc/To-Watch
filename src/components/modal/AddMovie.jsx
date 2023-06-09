@@ -4,7 +4,7 @@ import { TowatchContext } from "../../hooks/TowatchContext";
 
 function AddMovie() {
   const { addNewMovie, setOpenModal } = React.useContext(TowatchContext);
-  const [newMovieValue, setNewMovieValue] = React.useState('');
+  const [newMovieValue, setNewMovieValue] = React.useState("");
 
   const onSubmit = (event) => {
     event.preventDefault();
