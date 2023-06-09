@@ -11,7 +11,7 @@ function TowatchSearcher(){
       <div className="towatchSearcher">
      <input 
      className="towatchSearcher__bar" 
-     placeholder="       ...The third man"
+     placeholder="...The third man"
      value={searchValue}
      onChange={(event) =>{
        setSearchValue(event.target.value);
