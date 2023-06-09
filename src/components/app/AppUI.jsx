@@ -27,7 +27,7 @@ function AppUI() {
       <TowatchList>
         {loading && <p>Loading...</p>}
         {error && <p>error</p>}
-        {!loading && searchedMovies.length === 0 && <p>add a film</p>}
+        {!loading && searchedMovies.length === 0 && <p>click the button and add a film</p>}
 
         {searchedMovies.map((movie) => (
           <TowatchItem
