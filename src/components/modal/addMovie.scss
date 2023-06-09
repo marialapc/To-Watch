@@ -6,11 +6,11 @@
   text-align: center;
   gap: 1.5rem;
   padding: 1rem;
+  color: var(--pink);
   background-color: var(--white);
+  background-color: black;
   border: 1.5px solid var(--pink);
   border-radius: 1rem;
-  color: var(--pink);
-  background-color: black;
 
   &__label {
     font-size: 2rem;
@@ -18,9 +18,9 @@
 
   &__textarea {
     width: 14rem;
+    padding: 0.1rem;
     border: 2px solid var(--pink);
     border-radius: 0.5rem;
-    padding: 0.1rem;
   }
 
   &__buttonContainer {
