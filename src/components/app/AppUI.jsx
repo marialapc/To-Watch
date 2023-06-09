@@ -27,7 +27,9 @@ function AppUI() {
       <TowatchList>
         {loading && <p>Loading...</p>}
         {error && <p>error</p>}
-        {!loading && searchedMovies.length === 0 && <p>click the button and add a film</p>}
+        {!loading && searchedMovies.length === 0 && (
+          <p>click the button and add a film</p>
+        )}
 
         {searchedMovies.map((movie) => (
           <TowatchItem
@@ -40,16 +42,12 @@ function AppUI() {
         ))}
       </TowatchList>
 
-      <CreateTowatchButton
-      setOpenModal={setOpenModal
-      } />
+      <CreateTowatchButton setOpenModal={setOpenModal} />
       {openModal && (
-       <Modal>
-  <AddMovie>
-    
-  </AddMovie>
-       </Modal>
-       )}
+        <Modal>
+          <AddMovie></AddMovie>
+        </Modal>
+      )}
     </div>
   );
 }
