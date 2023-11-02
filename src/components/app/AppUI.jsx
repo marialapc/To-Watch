@@ -14,6 +14,7 @@ function AppUI() {
     error,
     searchedMovies,
     watched,
+    unWatched,
     deleted,
     openModal,
     setOpenModal,
@@ -36,6 +37,7 @@ function AppUI() {
             key={movie.title}
             title={movie.title}
             watched={movie.watched}
+            onUnWatched={() => unWatched(movie.title)}
             onWatched={() => watched(movie.title)}
             onDelete={() => deleted(movie.title)}
           />

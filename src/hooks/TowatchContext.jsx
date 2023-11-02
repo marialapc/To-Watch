@@ -25,8 +25,8 @@ function TowatchProvider({ children }) {
   const addNewMovie = (title) => {
     const newMovies = [...movies];
     newMovies.push({
-    title,
-    watched: false,
+      title,
+      watched: false,
     });
     saveMovies(newMovies);
     };
@@ -37,6 +37,13 @@ function TowatchProvider({ children }) {
     newMovies[movieIndex].watched = true;
     saveMovies(newMovies);
   };
+
+  const unWatched = (title) => {
+    const newMovies = [...movies];
+    const movieIndex = newMovies.findIndex((movie) => movie.title === title);
+    newMovies[movieIndex].watched = false;
+    saveMovies(newMovies);
+  }
 
   const deleted = (title) => {
     const newMovies = [...movies];
@@ -56,6 +63,7 @@ function TowatchProvider({ children }) {
         setSearchValue,
         searchedMovies,
         watched,
+        unWatched,
         deleted,
         addNewMovie,
         openModal,
