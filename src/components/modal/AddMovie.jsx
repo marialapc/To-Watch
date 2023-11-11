@@ -8,6 +8,10 @@ function AddMovie() {
 
   const onSubmit = (event) => {
     event.preventDefault();
+    if (newMovieValue.trim() === "") {
+      alert("Por favor, ingresa el nombre de una película");
+      return;
+    }
     addNewMovie(newMovieValue);
     setOpenModal(false);
   };
@@ -25,7 +29,7 @@ function AddMovie() {
       <label className="form__label"> AÑADE UNA NUEVA PELÍCULA</label>
       <textarea
         className="form__textarea"
-        placeholder="Blade Runner"
+        placeholder=""
         value={newMovieValue}
         onChange={onChange}
       ></textarea>
