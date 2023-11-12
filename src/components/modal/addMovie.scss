@@ -46,5 +46,11 @@
     color: var(--black);
     background-color: var(--pink);
     border: 1px solid var(--blck);
+  
+    &[disabled] {
+     color: var(--pink);
+     background-color: var(--black);
+     border: 1px solid var(--pink);
+   }
   }
 }
