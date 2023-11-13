@@ -35,13 +35,13 @@ function AddMovie() {
       ></textarea>
       <div className="form__buttonContainer">
       <button
-        disabled={newMovieValue === ""} 
-        className="form__button form__button--add">
-          ADD </button>
-      <button
         className=" form__button form__button--cancel"
         onClick={onCancel}>
           CANCEL </button>
+          <button
+        disabled={newMovieValue === ""} 
+        className="form__button form__button--add">
+          ADD </button>
       </div>
     </form>
   );
