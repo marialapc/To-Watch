@@ -1,12 +1,13 @@
 .towatchList {
   display: flex;
   flex-direction: column;
-  max-height: 60vh;
   gap: 1rem;
+  max-height: 60vh;
   padding-top: 1rem;
   padding-block-end: 5rem;
   list-style: none;
   overflow: auto;
+  font-size: 1rem;
 }
 
 .towatchList::-webkit-scrollbar {
