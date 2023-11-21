@@ -1,12 +1,11 @@
-.towatchCounter{
-font-size: 4.2rem;
-font-weight: 100;
-padding-left: 1rem;
-padding-bottom: 0.9rem;
-margin-top: 10rem;
+.towatchCounter {
+    font-size: 4.2rem;
+    font-weight: 100;
+    padding-left: 1rem;
+    padding-bottom: 0.9rem;
+    margin-top: 6rem;
 
-
-&__number{
-color: var(--pink);
-}
+    &__number {
+        color: var(--pink);
+    }
 }
