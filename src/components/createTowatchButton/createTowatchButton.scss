@@ -1,13 +1,13 @@
 .createTowatchButton {
   z-index: 1;
   position: fixed;
+  bottom: 4rem;
+  right: 2rem;
   display: flex;
   align-items: center;
   justify-content: center;
   align-self: flex-end;
-  line-height: normal;
-  bottom: 4rem;
-  margin-right: 2rem;
+  line-height: 3rem;
   width: 3rem;
   height: 3rem;
   font-size: 3rem;
