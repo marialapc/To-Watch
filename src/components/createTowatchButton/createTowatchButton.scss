@@ -25,4 +25,8 @@
   color: var(--pink);
   background-color: var(--black);
   border: 1px solid var(--pink);
+
+  line {
+    stroke: var(--pink);
+  }     
 }
