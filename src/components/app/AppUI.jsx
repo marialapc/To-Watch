@@ -1,12 +1,13 @@
+import React from "react";
 import { CreateTowatchButton } from "../createTowatchButton/CreateTowatchButton";
 import { TowatchCounter } from "../towatchCounter/TowatchCounter";
 import { TowatchItem } from "../towatchItem/TowatchItem";
 import { TowatchList } from "../towatchList/TowatchList";
 import { TowatchSearcher } from "../towatchSearcher/TowatchSearcher";
 import { TowatchContext } from "../../hooks/TowatchContext";
-import React from "react";
-import { Modal } from "../modal/Modal";
 import { AddMovie } from "../modal/AddMovie";
+import { Modal } from "../modal/modal";
+
 
 function AppUI() {
   const {
